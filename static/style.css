@@ -1,0 +1,173 @@
+body {
+  position: relative;
+  font-family: helvetica;
+  background-color: white;
+  min-width: 100%;
+  min-height: 100%;
+  margin: 0;
+  outline: none;
+}
+
+body:focus-within a {
+  outline: 0
+}
+header input {
+  margin-left: 1em;
+  margin-bottom: 1em;
+  width: 92%;
+  padding: .5em;
+}
+h1 {
+  text-align: center;
+  color: white;
+  padding-top: 1em;
+}
+
+.tile {
+  box-shadow: 9px 9px 10px -1px rgba(0,0,0,0.25);
+  transition: ease .3s;
+  display: flex;
+  flex-direction: column;
+}
+
+.tile:hover {
+  transform: scale(1.05)
+}
+
+section>h1 {
+  align-self: center;
+  margin: 0;
+}
+
+.active {
+  display: flex;
+  flex-direction: column;
+  grid-column-start: 2;
+  grid-column-end: 2;
+}
+
+nav {
+  display: flex;
+  flex-direction: row;
+  align-self: stretch;
+  grid-column-start: 1;
+  grid-column-end: 4;
+  grid-row-start: 1;
+  grid-row-end: 4;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  z-index: 100129;
+}
+
+nav>li {
+  text-decoration: none;
+  list-style-type: none;
+  list-style: none;
+  padding: 0;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  background: linear-gradient(233deg, #ff2020, #f2ff40);
+  background-size: 400% 400%;
+  animation: AnimationName 10s ease infinite;
+  color: white;
+  border: solid white 3px;
+  line-height: 2;
+}
+
+a {
+  display: block;
+  text-decoration: none;
+  font-weight: 500;
+  align-self: center;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  font-size: 1.5em;
+  color:white;
+}
+
+img {
+  object-fit: contain;
+  max-width: 100%;
+}
+
+ul li {
+  list-style: none;
+  padding-left: 1em;
+  color: black;
+}
+
+label {
+  width: 50%;
+}
+
+header {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: black;
+  top: 0;
+  background: linear-gradient(233deg, #ff2020, #f2ff40);
+  background-size: 400% 400%;
+  animation: AnimationName 10s ease infinite;
+}
+
+header img {
+  max-width: 10em;
+}
+
+.flex {
+  display: flex;
+}
+
+.character {
+  color: black;
+  align-self: center;
+  margin: 1em;    
+}
+
+.name {
+  color: white;
+}
+
+.comics {
+  margin: 2em;
+  padding: 2em;
+  margin-bottom: 5em;
+}
+
+/* .heroImage {
+  position: absolute;
+} */
+
+#characterPage {
+  background-color: rgba(0,0,0,.3);
+    margin: 2em;
+    width: 33%;
+    top: 50%;
+    margin-left: 50%;
+    transform: translate(-50%);
+}
+
+#characters {
+  padding-left: 2em;
+  padding-right: 2em;
+  display: grid;
+  row-gap: 3em;
+  column-gap: 2em;
+  position: relative;
+  grid-template-columns: repeat(auto-fit, minmax(394px, 1fr));
+}
+
+.logo {
+  box-shadow: none;
+}
+
+@keyframes AnimationName {
+    0%{background-position:0% 75%}
+    50%{background-position:100% 26%}
+    100%{background-position:0% 75%}
+}

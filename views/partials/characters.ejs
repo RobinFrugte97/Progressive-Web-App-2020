@@ -1,0 +1,11 @@
+<section id="detail" class="active">
+    <ul id="characters">
+        <% indexData.forEach(item => { %>
+        <div class="tile">
+            <a href="/<%= item.id %>" class="link"> <img class="thumbnail"
+                    src="<%= item.thumbnail.path + '/landscape_incredible.jpg' %>" alt=""> </a>
+            <li class="character"><%= item.name %></li>
+        </div>
+        <% }) %>
+    </ul>
+</section>
