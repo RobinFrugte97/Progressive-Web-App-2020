@@ -1,9 +1,8 @@
 const cacheName = 'cache-v1';
 const precacheResources = [
-        'style.css',
-        'dist/index.js',
-        'images/Marvel-Logo.png',
-        "offline/"
+        './style.css',
+        './dist/index.js',
+        './images/Marvel-Logo.png'
 ];
 
 self.addEventListener('install', event => {
