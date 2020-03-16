@@ -1,6 +1,5 @@
 const cacheName = 'cache-v1';
 const precacheResources = [
-        '/home',
         'style.css',
         'dist/index.js',
         'images/Marvel-Logo.png',
