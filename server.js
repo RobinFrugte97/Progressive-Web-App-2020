@@ -13,6 +13,10 @@ app.set('view engine', 'ejs')
 app.set('views', 'views')
 
 app.get("/", (req, res) => {
+    res.redirect('/home');
+})
+
+app.get("/home", (req, res) => {
     fetch(`${url}?ts=1&apikey=${apikey}&hash=${hash}&limit=${limit}`)
         .then((resp) => resp.json())
         .then(index => {
