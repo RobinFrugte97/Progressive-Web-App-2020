@@ -6,7 +6,7 @@ const url = 'https://gateway.marvel.com/v1/public/characters'
 const apikey = 'e2c13dcb787436182cc25b65cbcfde95'
 const hash = 'f60cbe16481792de29bc9c79da37aa05'
 const limit = 100
-const port = 3000
+const port = process.env.PORT || 3000
 
 app.use(express.static('static'))
 app.set('view engine', 'ejs')
