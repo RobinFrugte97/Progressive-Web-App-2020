@@ -15,8 +15,7 @@
   "dependencies": {
     "ejs": "^3.0.1",
     "express": "^4.17.1",
-    "node-fetch": "^2.6.0",
-    "request": "^2.88.2"
+    "node-fetch": "^2.6.0"
   },
   "devDependencies": {
     "gulp": "^4.0.2",
