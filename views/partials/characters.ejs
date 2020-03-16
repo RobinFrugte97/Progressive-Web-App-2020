@@ -1,9 +1,12 @@
 <section id="detail" class="active">
     <ul id="characters">
         <% indexData.forEach(item => { %>
+            <% let https1 = item.thumbnail.path.slice(0, 3) %>
+            <% let https2 = item.thumbnail.path.slice(4) %>
+            <% let https = https1.concat('s', https2) %>
         <div class="tile">
             <a href="/<%= item.id %>" class="link"> <img class="thumbnail"
-                    src="<%= item.thumbnail.path + '/landscape_incredible.jpg' %>" alt=""> </a>
+                    src="<%= https + '/landscape_incredible.jpg' %>" alt=""> </a>
             <li class="character"><%= item.name %></li>
         </div>
         <% }) %>
