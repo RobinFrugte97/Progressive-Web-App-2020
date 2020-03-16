@@ -39,5 +39,5 @@ app.get("/:id", (req, res) => {
 })
 
 app.listen(port, () => {
-    console.log('server is running on port 3000')
+    console.log(`server is running on port ${port}`)
 })
