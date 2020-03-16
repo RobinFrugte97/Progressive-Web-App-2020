@@ -6,7 +6,6 @@
   "scripts": {
     "predev": "npm run build:js",
     "dev": "nodemon server.js",
-    "prestart": "npm run build:js",
     "start": "node server.js",
     "build:js": "node scripts/buildjs.js",
     "prebuild:js": "rimraf dist"
