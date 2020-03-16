@@ -2,9 +2,9 @@ self.addEventListener('install', event => event.waitUntil(
     caches.open('msh-cache-v1')
     .then(cache => cache.addAll([
         '/home',
-        './style.css',
-        './dist/index.js',
-        './images/Marvel-Logo.png'
+        '/style.css',
+        '/dist/index.js',
+        '/images/Marvel-Logo.png'
     ]))
     .then(self.skipWaiting())
 ))
