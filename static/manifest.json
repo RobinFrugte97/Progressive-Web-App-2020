@@ -1,0 +1,17 @@
+{
+    "name": "Marvel Super Heroes",
+    "short_name": "MSH",
+    "description": "Lookup all your favourite Marvel Super heroes!",
+    "start_url": "/?homescreen=1",
+    "background_color": "#ff2020",
+    "theme_color": "#f2ff40",
+    "display": "standalone",
+    "orientation": "portrait",
+    "icons": [
+        {
+            "src": "/images/Marvel-Logo.png",
+            "sizes": "256x256",
+            "type": "image/png"
+        }
+    ]
+}
