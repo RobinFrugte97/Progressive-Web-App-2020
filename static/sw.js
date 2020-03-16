@@ -7,8 +7,11 @@ self.addEventListener('install', event => event.waitUntil(
             'images/Marvel-Logo.png',
             "offline/"
         ]))
-        .then(self.skipWaiting())
-));
+))
+
+self.addEventListener('activate', event => {
+    console.log('Service worker activate event!');
+})
 
 self.addEventListener('fetch', event => {
     const request = event.request
