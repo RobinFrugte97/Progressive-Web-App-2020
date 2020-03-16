@@ -2,7 +2,7 @@
     "name": "Marvel Super Heroes",
     "short_name": "MSH",
     "description": "Lookup all your favourite Marvel Super heroes!",
-    "start_url": "/?homescreen=1",
+    "start_url": "/home",
     "background_color": "#ff2020",
     "theme_color": "#f2ff40",
     "display": "standalone",
