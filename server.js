@@ -1,5 +1,6 @@
 const express = require('express')
 const fetch = require('node-fetch')
+
 const app = express()
 const url = 'https://gateway.marvel.com/v1/public/characters'
 const apikey = 'e2c13dcb787436182cc25b65cbcfde95'
@@ -10,7 +11,6 @@ const port = 3000
 app.use(express.static('static'))
 app.set('view engine', 'ejs')
 app.set('views', 'views')
-
 
 app.get("/", (req, res) => {
     fetch(`${url}?ts=1&apikey=${apikey}&hash=${hash}&limit=${limit}`)

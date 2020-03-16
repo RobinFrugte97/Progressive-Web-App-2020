@@ -4,8 +4,10 @@
   "description": "pwa 2020",
   "main": "index.js",
   "scripts": {
+    "prestart": "npm run build:js",
     "start": "nodemon server",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build:js": "node scripts/buildjs.js",
+    "prebuild:js": "rimraf dist"
   },
   "author": "Robin Frugte",
   "license": "ISC",
@@ -16,6 +18,10 @@
     "request": "^2.88.2"
   },
   "devDependencies": {
-    "nodemon": "^2.0.2"
+    "gulp": "^4.0.2",
+    "gulp-concat": "^2.6.1",
+    "gulp-uglify": "^3.0.2",
+    "nodemon": "^2.0.2",
+    "rimraf": "^3.0.2"
   }
 }
