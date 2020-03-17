@@ -13,3 +13,9 @@ To get the marvel api, you have to create a developer account on the [marvel dev
 
 Get an overview of Marvel superheroes and characters featured in the Marvel comics.
 Every character has a detail page, containing a larger picture and the character name.
+
+
+## To-Do
+
+- install and use dotenv
+- change sw sequence, to check cache before fetching

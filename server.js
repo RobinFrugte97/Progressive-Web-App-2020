@@ -38,6 +38,10 @@ app.get("/:id", (req, res) => {
         })
 })
 
+app.get("/offline", (req, res) => {
+    res.render('offline.ejs')
+})
+
 app.listen(port, () => {
     console.log(`server is running on port ${port}`)
 })
