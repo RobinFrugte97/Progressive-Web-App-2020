@@ -1,10 +1,10 @@
+require('dotenv').config()
+
 const express = require('express')
 const fetch = require('node-fetch')
 
 const app = express()
 const url = 'https://gateway.marvel.com/v1/public/characters'
-const apikey = 'e2c13dcb787436182cc25b65cbcfde95'
-const hash = 'f60cbe16481792de29bc9c79da37aa05'
 const limit = 100
 const port = process.env.PORT || 3000
 
@@ -16,8 +16,11 @@ app.get("/", (req, res) => {
     res.redirect('/home')
 })
 
+app.get("/offline", (req, res) => {
+    res.render("offline.ejs")
+})
 app.get("/home", (req, res) => {
-    fetch(`${url}?ts=1&apikey=${apikey}&hash=${hash}&limit=${limit}`)
+    fetch(`${url}?ts=1&apikey=${process.env.APIKEY}&hash=${process.env.HASH}&limit=${limit}`)
         .then((resp) => resp.json())
         .then(index => {
             let indexData = index.data.results
@@ -27,7 +30,7 @@ app.get("/home", (req, res) => {
 
 app.get("/:id", (req, res) => {
     const id = req.params.id
-    fetch(`${url}/${id}?ts=1&apikey=${apikey}&hash=${hash}`)
+    fetch(`${url}/${id}?ts=1&apikey=${process.env.APIKEY}&hash=${process.env.HASH}`)
         .then((resp) => resp.json())
         .then(detail => {
             let detailData = detail.data.results[0]
@@ -38,9 +41,6 @@ app.get("/:id", (req, res) => {
         })
 })
 
-app.get("/offline", (req, res) => {
-    res.render('offline.ejs')
-})
 
 app.listen(port, () => {
     console.log(`server is running on port ${port}`)

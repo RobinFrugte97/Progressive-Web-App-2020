@@ -1,5 +1,6 @@
 const CORE_CACHE = 'msh-cache-v1'
 const CORE_BASE = [
+    '/offline',
     '/style.css',
     '/dist/index.js',
     '/images/Marvel-Logo.png'
