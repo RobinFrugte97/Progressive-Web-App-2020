@@ -1,6 +1,9 @@
 <section id="characterPage" class="active">
     <h1 class="character"><%= detailData.name %></h1>
-    <img class="heroImage" src="<%= detailData.thumbnail.path + '/portrait_uncanny.jpg' %>" alt="">
+    <% let https1 = detailData.thumbnail.path.slice(0, 4) %>
+    <% let https2 = detailData.thumbnail.path.slice(4) %>
+    <% let https = https1.concat('s', https2) %>
+    <img class="heroImage" src="<%= https + '/portrait_uncanny.jpg' %>" alt="">
     <h1>Comics</h1>
     <ul class="comics">
         <% detailData.comics.items.forEach( comic => {%>
