@@ -17,5 +17,6 @@ Every character has a detail page, containing a larger picture and the character
 
 ## To-Do
 
-- install and use dotenv
-- change sw sequence, to check cache before fetching
+- install and use dotenv check
+- change sw sequence, to check cache before fetching check
+- 
